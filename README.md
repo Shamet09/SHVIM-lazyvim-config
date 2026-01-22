@@ -28,6 +28,7 @@ A customized Neovim configuration based on LazyVim for C, Python, and Assembly d
 ### System: Fedora (WSL2 or native)
 
 **Windows WSL Setup** (if using WSL):
+
 ```bash
 # Install Fedora WSL
 wsl --install -d Fedora
@@ -63,6 +64,7 @@ sudo dnf install neovim -y
 ### 2. Programming Language Support
 
 #### C/C++ Development
+
 ```bash
 # Install clang and clangd
 sudo dnf install clang clang-tools-extra -y
@@ -72,6 +74,7 @@ sudo dnf install gdb -y
 ```
 
 #### Python Development
+
 ```bash
 # Install Python LSP and tools
 pip3 install --user python-lsp-server[all] debugpy pyright black isort ruff pylint
@@ -81,6 +84,7 @@ pip3 install --user pynvim
 ```
 
 #### Assembly (NASM)
+
 ```bash
 sudo dnf install nasm -y
 
@@ -91,17 +95,20 @@ sudo dnf install nasm -y
 ### 3. Additional Tools
 
 #### Lua 5.1 (Required for some plugins)
+
 ```bash
 sudo dnf install -y lua5.1 lua5.1-devel luarocks
 ```
 
 #### Security/Pentesting Tools (Optional)
+
 ```bash
 # Install security tools
 sudo dnf install nmap wireshark -y
 ```
 
 #### Multimedia & Utilities (Optional)
+
 ```bash
 # For media playback
 sudo dnf install mpv aria2 ffmpeg --allowerasing -y
@@ -186,6 +193,7 @@ nvim
 ## ⌨️ Keybindings
 
 ### General
+
 | Key | Action |
 |-----|--------|
 | `jk` or `kj` | Exit insert/visual mode |
@@ -196,6 +204,7 @@ nvim
 | `<leader>h` | Clear search highlighting |
 
 ### Dashboard (SHVIM Start Screen)
+
 | Key | Action |
 |-----|--------|
 | `f` | Find files (fuzzy) |
@@ -209,6 +218,7 @@ nvim
 | `q` | Quit |
 
 ### File Navigation
+
 | Key | Action |
 |-----|--------|
 | `<leader>ff` or `Space-f-f` | Find files (Telescope) |
@@ -219,6 +229,7 @@ nvim
 | `<leader>e` | Toggle file explorer (Neo-tree) |
 
 ### Code Running & Compilation
+
 | Key | Action |
 |-----|--------|
 | `F5` or `<leader>rp` | Run Python file in terminal |
@@ -228,6 +239,7 @@ nvim
 | `<leader>cd` | Compile C with debug symbols (-g) |
 
 ### Debugging
+
 | Key | Action |
 |-----|--------|
 | `F9` | Toggle breakpoint |
@@ -239,6 +251,7 @@ nvim
 | `<leader>du` | Toggle debug UI |
 
 ### Terminal
+
 | Key | Action |
 |-----|--------|
 | `<leader>tt` | Toggle terminal |
@@ -246,6 +259,7 @@ nvim
 | `Ctrl+\` | Toggle terminal (if configured) |
 
 ### Code Navigation
+
 | Key | Action |
 |-----|--------|
 | `gd` | Go to definition |
@@ -260,6 +274,7 @@ nvim
 | `<leader>u` | Undo tree |
 
 ### Editing
+
 | Key | Action |
 |-----|--------|
 | `gcc` | Comment/uncomment line |
@@ -272,6 +287,7 @@ nvim
 | `p` (visual) | Paste without yanking replaced text |
 
 ### Git
+
 | Key | Action |
 |-----|--------|
 | `<leader>gb` | Toggle git blame |
@@ -282,6 +298,7 @@ nvim
 | `:Git` | Git commands (Fugitive) |
 
 ### Cybersecurity Tools
+
 | Key | Action |
 |-----|--------|
 | `<leader>hx` | Toggle hex view |
@@ -298,6 +315,7 @@ nvim
 The config includes transparent background support. Make sure your terminal supports transparency:
 
 **Windows Terminal:**
+
 - Settings → Appearance → Acrylic opacity/transparency
 
 Transparency is configured in `colorscheme.lua` with `transparent_background = true`.
@@ -311,6 +329,7 @@ Icons require a Nerd Font installed:
 3. Set in Windows Terminal: Settings → Profile → Appearance → Font face
 
 **Recommended fonts:**
+
 - JetBrainsMono Nerd Font
 - FiraCode Nerd Font
 - Hack Nerd Font
@@ -320,6 +339,7 @@ Icons require a Nerd Font installed:
 ## 📦 Installed Plugins
 
 ### Core
+
 - **LazyVim** - Neovim distribution
 - **lazy.nvim** - Plugin manager
 - **telescope.nvim** - Fuzzy finder
@@ -328,12 +348,14 @@ Icons require a Nerd Font installed:
 - **nvim-treesitter** - Syntax highlighting
 
 ### Dashboard & UI
+
 - **dashboard-nvim** - Custom SHVIM dashboard
 - **nvim-web-devicons** - File icons
 - **indent-blankline.nvim** - Indent guides
 - **nvim-colorizer.lua** - Color highlighter
 
 ### Language Support & LSP
+
 - **nvim-lspconfig** - LSP configurations
 - **clangd** - C/C++ LSP
 - **pyright** - Python LSP
@@ -342,6 +364,7 @@ Icons require a Nerd Font installed:
 - **clang-format** - C/C++ formatter
 
 ### Debugging (DAP)
+
 - **nvim-dap** - Debug Adapter Protocol client
 - **nvim-dap-ui** - Debug UI
 - **nvim-dap-virtual-text** - Shows variable values inline
@@ -349,6 +372,7 @@ Icons require a Nerd Font installed:
 - GDB adapter for C/C++ debugging
 
 ### Development Tools
+
 - **toggleterm.nvim** - Terminal integration
 - **vim-fugitive** - Git integration
 - **gitsigns.nvim** - Git signs in gutter + blame
@@ -358,12 +382,14 @@ Icons require a Nerd Font installed:
 - **vim-visual-multi** - Multiple cursors
 
 ### Navigation & Search
+
 - **trouble.nvim** - Diagnostics/quickfix list
 - **aerial.nvim** - Code outline/structure
 - **todo-comments.nvim** - TODO highlighting and search
 - **undotree** - Undo history visualizer
 
 ### Cybersecurity Tools
+
 - **hex.nvim** - Hex editor for binary analysis
 - **vim-dadbod-ui** - Database viewer/manager
 - **rest-nvim** - REST API client
@@ -376,6 +402,7 @@ Icons require a Nerd Font installed:
 ## 🛠 Troubleshooting
 
 ### Icons not showing
+
 ```bash
 # Make sure you have a Nerd Font installed and set in your terminal
 # Verify in Neovim:
@@ -383,11 +410,13 @@ Icons require a Nerd Font installed:
 ```
 
 ### Python provider errors
+
 ```bash
 pip3 install --user pynvim
 ```
 
 ### LSP not working
+
 ```bash
 # Open Neovim and check LSP status
 nvim test.py
@@ -398,6 +427,7 @@ nvim test.py
 ```
 
 ### Debugging not working
+
 ```bash
 # Make sure debugpy is installed
 pip3 install --user debugpy
@@ -410,17 +440,20 @@ sudo dnf install gdb
 ```
 
 ### DNS issues in WSL (can't reach GitHub)
+
 ```bash
 sudo bash -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'
 sudo bash -c 'echo "nameserver 8.8.4.4" >> /etc/resolv.conf'
 ```
 
 ### Git lock errors
+
 ```bash
 rm -f ~/.local/share/nvim/lazy/*/.git/index.lock
 ```
 
 ### Plugin errors after update
+
 ```bash
 # Clean reinstall
 rm -rf ~/.local/share/nvim/lazy
@@ -428,74 +461,6 @@ nvim
 :Lazy sync
 ```
 
-### Slow file finding in WSL
-```bash
-# IMPORTANT: Work in Linux filesystem, not Windows
-# Slow:
-cd /mnt/c/Users/YourName/projects  # ❌ Windows filesystem
-
-# Fast:
-cd ~/projects                       # ✅ Linux filesystem
-nvim
-```
-
-The config automatically ignores `/mnt/*` for better performance.
-
----
-
-## 📁 Recommended Directory Structure
-
-```bash
-# Create organized workspace in Linux filesystem (fast)
-mkdir -p ~/projects
-mkdir -p ~/school
-mkdir -p ~/.config
-
-# Example project structure
-~/projects/
-├── password-project/
-├── c-programs/
-├── python-scripts/
-└── ctf-challenges/
-```
-
-**WSL Performance Tip:** Keep your active projects in `~/` (Linux filesystem), not `/mnt/c/` (Windows). The speed difference is significant!
-
----
-
-## 🔄 Updating
-
-### Update Neovim plugins
-```bash
-nvim
-:Lazy update
-```
-
-### Update your config from GitHub
-```bash
-cd ~/.config/nvim
-git pull
-nvim
-:Lazy sync
-```
-
-### Push config changes to GitHub
-```bash
-cd ~/.config/nvim
-git add .
-git commit -m "Description of changes"
-git push
-```
-
-### Update system packages
-```bash
-sudo dnf update -y
-```
-
-### Update Fedora version (when new release)
-```bash
-sudo dnf system-upgrade download --releasever=XX
-sudo dnf system-upgrade reboot
 ```
 
 ---
@@ -503,7 +468,6 @@ sudo dnf system-upgrade reboot
 ## 📝 Notes
 
 - **WSL Performance:** Always work in `~/` (Linux filesystem) not `/mnt/c/` for better performance
-- **Memory:** WSL only uses memory when running. Use `wsl --shutdown` to free memory when done
 - **Python Provider:** If you get Python errors, run `pip3 install --user pynvim`
 - **Compilation:** 
   - C files: `gcc filename.c -o filename`
@@ -513,28 +477,17 @@ sudo dnf system-upgrade reboot
   - C/C++: Uses GDB
   - Set breakpoints with `F9`, start with `Space-d-c`
 
----
 
-## 🎓 Learning Resources
 
-### Vim Motions
-```vim
-# Built-in interactive tutorial
-:Tutor
 ```
 
 ### Help System
+
 ```vim
 :help <topic>
 :help keymaps
 :help lsp
-```
 
-### Recommended Learning Path
-1. **Week 1:** Master basic motions (`hjkl`, `w`, `b`, `0`, `$`, `gg`, `G`)
-2. **Week 2:** Learn editing (`d`, `y`, `p`, `c`, `i`, `a`, `o`)
-3. **Week 3:** Practice on real projects (use it daily!)
-4. **Week 4:** Explore advanced features (LSP, debugging, git)
 
 ---
 
